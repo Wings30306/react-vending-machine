@@ -1,5 +1,5 @@
 import './App.css';
-import { Link, Route, Switch } from "react-router-dom"
+import { NavLink, Route, Switch } from "react-router-dom"
 import VendingMachine from "./VendingMachine"
 import Apple from "./Apple"
 import Chocolate from "./Chocolate"
@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/">Home </Link>
-        <Link to="/apple">Apple </Link>
-        <Link to="/chocolate">Chocolate </Link>
-        <Link to="/crisps">Crisps </Link>
+        <NavLink exact activeClassName="active-nav" to="/">Home </NavLink>
+        <NavLink exact activeClassName="active-nav" to="/apple">Apple </NavLink>
+        <NavLink exact activeClassName="active-nav" to="/chocolate">Chocolate </NavLink>
+        <NavLink exact activeClassName="active-nav" to="/crisps">Crisps </NavLink>
       </nav>
       <Switch>
         <Route exact path='/' render={() => <VendingMachine />} />

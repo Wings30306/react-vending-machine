@@ -7,6 +7,22 @@
   pointer-events: none;
 }
 
+nav {
+  background-color: darkblue;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color:darkgray;
+  text-decoration: none;
+}
+
+nav .active-nav {
+  color: white;
+  font-weight: bold;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
